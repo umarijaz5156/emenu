@@ -1,0 +1,14 @@
+{
+    "alias": "glow",
+    "description": "",
+    "isTemplateModule":true,
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Glow\\Providers\\Main"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

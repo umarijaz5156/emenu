@@ -1,0 +1,63 @@
+{
+    "alias": "razorpay",
+    "version":"1.2",
+    "isPaymentModule":true,
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Razorpay\\Providers\\Main"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "global_fields":[
+        {
+            "separator":"Razorpay configuration",
+            "title": "Enable Razorpay for payments when ordering",
+            "key": "ENABLE_RAZORPAY",
+            "ftype": "bool",
+            "value":false
+        },
+        {
+            "title": "System will use",
+            "key": "VENDORS_OR_ADMIN_RAZORPAY",
+            "ftype":"select",
+            "onlyin":"qrsaas",
+            "value":"admin",
+            "data":{
+                "admin":"Admin defined Razorpay",
+                "vendor":"Vendor defined Razorpay"
+            }
+        },{
+            "title":"Razorpay key", 
+            "key":"RAZORPAY_KEY", 
+            "value":""
+        },
+        {
+            "title":"Razorpay secret", 
+            "key":"RAZORPAY_SECRET", 
+            "value":""
+        }],
+        "vendor_fields":[{
+            "separator":"Razorpay configuration",
+            "title": "Enable Razorpay for payments when ordering",
+            "key": "razorpay_enable",
+            "ftype": "bool",
+            "value":false,
+            "onlyin":"qrsaas"
+        },{
+            "title":"Razorpay key", 
+            "key":"razorpay_key", 
+            "value":"",
+            "onlyin":"qrsaas"
+        },
+        {
+            "title":"Razorpay secret", 
+            "key":"razorpay_secret", 
+            "value":"",
+            "onlyin":"qrsaas"
+        }]
+
+}

@@ -1,0 +1,26 @@
+{
+    "alias": "paddle-subscribe",
+    "version":"1.2",
+    "description": "",
+    "keywords": [],
+    "isPaymentModule":false,
+    "isSubscriptionModule":true,
+    "name":"Paddle",
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\PaddleSubscribe\\Providers\\Main"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "global_fields":[
+        {
+            "separator":"Paddle Subscribe configuration",
+            "title":"Paddle vendor id - Subscribe", 
+            "key":"paddleVendorID", 
+            "value":""
+        }
+    ],
+    "vendor_fields":[]
+}

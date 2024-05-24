@@ -1,0 +1,958 @@
+[2024-05-13 15:52:45] local.ERROR: There are no commands defined in the "ide-helper" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ide-helper\" namespace. at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\symfony\\console\\Application.php:650)
+[stacktrace]
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\symfony\\console\\Application.php(701): Symfony\\Component\\Console\\Application->findNamespace()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find()
+#2 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#3 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(94): Symfony\\Component\\Console\\Application->run()
+#4 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run()
+#5 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2024-05-13 15:52:45] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 Command line code(1): include_once()
+#1 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 Command line code(1): include_once()
+#1 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 15:52:45] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 15:53:21] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 15:54:21] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 15:55:22] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 15:56:21] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 15:57:21] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 15:58:21] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 15:59:21] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:00:21] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:01:21] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:02:21] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:14:34] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:14:34] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 Command line code(1): include_once()
+#1 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 Command line code(1): include_once()
+#1 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:15:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:16:33] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:17:33] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:18:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:19:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:20:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:21:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:22:33] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:23:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:24:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:25:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:26:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:27:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:28:33] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:29:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:30:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:31:37] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:32:33] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:33:33] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:34:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:35:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:36:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:37:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:38:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:39:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:40:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:41:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:42:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:43:32] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-13 16:44:33] local.ERROR: Uncaught Error: Class "Auth0\Login\Auth0User" not found in C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\app\Models\MyAuth0User.php:8
+Stack trace:
+#0 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(576): include()
+#1 C:\Users\Himel Bikon\Desktop\Nick Productions\emenu102023\vendor\composer\ClassLoader.php(427): Composer\Autoload\{closure}()
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Error: Class \"Auth0\\Login\\Auth0User\" not found in C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8
+Stack trace:
+#0 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(576): include()
+#1 C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\vendor\\composer\\ClassLoader.php(427): Composer\\Autoload\\{closure}()
+#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#3 Command line code(1): class_exists()
+#4 [internal function]: {closure}()
+#5 Command line code(1): array_filter()
+#6 {main}
+  thrown at C:\\Users\\Himel Bikon\\Desktop\\Nick Productions\\emenu102023\\app\\Models\\MyAuth0User.php:8)
+[stacktrace]
+#0 {main}
+"} 

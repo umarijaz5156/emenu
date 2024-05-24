@@ -1,0 +1,35 @@
+{
+    "alias": "razorpay-subscribe",
+    "version": "1.1",
+    "isPaymentModule":false,
+    "isSubscriptionModule":true,
+    "name":"Razorpay",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\RazorpaySubscribe\\Providers\\Main"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "global_fields":[
+        {
+            "separator":"Razorpay subscription configuration",
+            "title":"Razorpay key", 
+            "key":"RAZORPAY_SUBSCRIBE_KEY", 
+            "value":""
+        },
+        {
+            "title":"Razorpay secret", 
+            "key":"RAZORPAY_SUBSCRIBE_SECRET", 
+            "value":""
+        },{
+            "title":"Razorpay WEB Hook secret", 
+            "key":"RAZORPAY_SUBSCRIBE_WEBHOOK_SECRET", 
+            "value":""
+        }
+    
+    ]
+}

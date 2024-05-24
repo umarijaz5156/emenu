@@ -1,0 +1,50 @@
+{
+    "alias": "mollie",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "isPaymentModule":true,
+    "order": 0,
+    "providers": [
+        "Modules\\Mollie\\Providers\\Main"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "global_fields":[
+    {
+        "separator":"Mollie configuration",
+        "title": "Enable Mollie for payments when ordering",
+        "key": "ENABLE_MOLLIE",
+        "ftype": "bool",
+        "value":false
+    },
+    {
+        "title": "System will use",
+        "key": "VENDORS_OR_ADMIN_MOLLIE",
+        "ftype":"select",
+        "onlyin":"qrsaas",
+        "value":"admin",
+        "data":{
+            "admin":"Admin defined Mollie",
+            "vendor":"Vendor defined Mollie"
+        }
+    },{
+        "title":"Mollie payment key", 
+        "key":"MOLLIE_PAYMENT_KEY", 
+        "value":""
+    }],
+    "vendor_fields":[{
+        "separator":"Mollie configuration",
+        "title": "Enable Mollie for payments when ordering",
+        "key": "mollie_enable",
+        "ftype": "bool",
+        "value":false,
+        "onlyin":"qrsaas"
+    },{
+        "title":"Mollie payment key", 
+        "key":"mollie_payment_key", 
+        "value":"",
+        "onlyin":"qrsaas"
+    }]
+}

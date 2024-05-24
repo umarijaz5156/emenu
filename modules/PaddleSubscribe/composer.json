@@ -1,0 +1,15 @@
+{
+    "name": "akaunting/paddle-subscribe",
+    "description": "",
+    "authors": [
+        {
+            "name": "Akaunting",
+            "email": "info@akaunting.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Modules\\PaddleSubscribe\\": ""
+        }
+    }
+}

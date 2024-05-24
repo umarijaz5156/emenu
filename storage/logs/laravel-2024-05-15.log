@@ -1,0 +1,354 @@
+[2024-05-15 16:33:21] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001  
+[2024-05-15 16:33:21] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/login  
+[2024-05-15 16:33:21] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/_debugbar/assets/stylesheets?theme=auto&v=1712173166  
+[2024-05-15 16:33:21] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/_debugbar/assets/javascript?v=1712173166  
+[2024-05-15 16:33:22] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/offline  
+[2024-05-15 16:33:22] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/manifest.json  
+[2024-05-15 16:34:09] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/login  
+[2024-05-15 16:34:10] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/default/logo_qrzebra.png  
+[2024-05-15 16:34:10] local.ERROR: Attempt to read property "user_id" on null {"exception":"[object] (ErrorException(code: 0): Attempt to read property \"user_id\" on null at /home/umar/code/emenu/app/Http/Controllers/FrontEndController.php:1096)
+[stacktrace]
+#0 /home/umar/code/emenu/app/Http/Controllers/FrontEndController.php(1096): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError()
+#1 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App\\Http\\Controllers\\FrontEndController->restorant()
+#2 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
+#3 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(262): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#4 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate\\Routing\\Route->runController()
+#5 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(721): Illuminate\\Routing\\Route->run()
+#6 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#7 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#8 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#9 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#10 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle()
+#11 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#12 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle()
+#13 /home/umar/code/emenu/app/Http/Middleware/Language.php(31): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#14 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): App\\Http\\Middleware\\Language->handle()
+#15 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#16 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest()
+#17 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Session\\Middleware\\StartSession->handle()
+#18 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#19 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle()
+#20 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#21 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle()
+#22 /home/umar/code/emenu/packages/mobidonia/laravel-dashboard-installer/src/Middleware/ToInstallMiddleware.php(23): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#23 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): dacoto\\LaravelInstaller\\Middleware\\ToInstallMiddleware->handle()
+#24 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#25 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(723): Illuminate\\Pipeline\\Pipeline->then()
+#26 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(698): Illuminate\\Routing\\Router->runRouteWithinStack()
+#27 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(662): Illuminate\\Routing\\Router->runRoute()
+#28 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(651): Illuminate\\Routing\\Router->dispatchToRoute()
+#29 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch()
+#30 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#31 /home/umar/code/emenu/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#32 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle()
+#33 /home/umar/code/emenu/app/Http/Middleware/LogVisitedUrl.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#34 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): App\\Http\\Middleware\\LogVisitedUrl->handle()
+#35 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#36 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#37 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#38 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#39 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#40 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#41 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#42 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
+#43 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#44 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#45 /home/umar/code/emenu/vendor/fruitcake/laravel-cors/src/HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#46 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
+#47 /home/umar/code/emenu/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#48 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
+#49 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#50 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then()
+#51 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#52 /home/umar/code/emenu/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
+#53 /home/umar/code/emenu/server.php(21): require_once('...')
+#54 {main}
+"} 
+[2024-05-15 16:34:10] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/manifest.json  
+[2024-05-15 16:35:17] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/login  
+[2024-05-15 16:35:17] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/manifest.json  
+[2024-05-15 16:35:40] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/login  
+[2024-05-15 16:35:41] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/login  
+[2024-05-15 16:35:41] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/manifest.json  
+[2024-05-15 16:35:44] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/login  
+[2024-05-15 16:35:44] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/home  
+[2024-05-15 16:35:49] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/salesvalue  
+[2024-05-15 16:35:50] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/_debugbar/open?id=Xfba09ea53224c8d5345742bd0bdd63a7&op=get  
+[2024-05-15 16:36:12] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/business  
+[2024-05-15 16:36:13] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/uploads/restorants/8821166c-c8e9-4354-9b6c-602bec1146be_thumbnail.jpg  
+[2024-05-15 16:36:13] local.ERROR: Attempt to read property "user_id" on null {"userId":1,"exception":"[object] (ErrorException(code: 0): Attempt to read property \"user_id\" on null at /home/umar/code/emenu/app/Http/Controllers/FrontEndController.php:1096)
+[stacktrace]
+#0 /home/umar/code/emenu/app/Http/Controllers/FrontEndController.php(1096): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError()
+#1 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App\\Http\\Controllers\\FrontEndController->restorant()
+#2 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
+#3 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(262): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#4 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate\\Routing\\Route->runController()
+#5 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(721): Illuminate\\Routing\\Route->run()
+#6 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#7 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#8 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#9 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#10 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle()
+#11 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#12 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle()
+#13 /home/umar/code/emenu/app/Http/Middleware/Language.php(31): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#14 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): App\\Http\\Middleware\\Language->handle()
+#15 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#16 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest()
+#17 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Session\\Middleware\\StartSession->handle()
+#18 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#19 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle()
+#20 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#21 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle()
+#22 /home/umar/code/emenu/packages/mobidonia/laravel-dashboard-installer/src/Middleware/ToInstallMiddleware.php(23): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#23 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): dacoto\\LaravelInstaller\\Middleware\\ToInstallMiddleware->handle()
+#24 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#25 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(723): Illuminate\\Pipeline\\Pipeline->then()
+#26 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(698): Illuminate\\Routing\\Router->runRouteWithinStack()
+#27 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(662): Illuminate\\Routing\\Router->runRoute()
+#28 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(651): Illuminate\\Routing\\Router->dispatchToRoute()
+#29 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch()
+#30 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#31 /home/umar/code/emenu/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#32 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle()
+#33 /home/umar/code/emenu/app/Http/Middleware/LogVisitedUrl.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#34 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): App\\Http\\Middleware\\LogVisitedUrl->handle()
+#35 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#36 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#37 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#38 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#39 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#40 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#41 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#42 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
+#43 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#44 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#45 /home/umar/code/emenu/vendor/fruitcake/laravel-cors/src/HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#46 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
+#47 /home/umar/code/emenu/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#48 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
+#49 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#50 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then()
+#51 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#52 /home/umar/code/emenu/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
+#53 /home/umar/code/emenu/server.php(21): require_once('...')
+#54 {main}
+"} 
+[2024-05-15 16:36:13] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/uploads/restorants/049424e6-fbc6-4220-bb1c-153ba713bcc1_thumbnail.jpg  
+[2024-05-15 16:36:13] local.ERROR: Attempt to read property "user_id" on null {"userId":1,"exception":"[object] (ErrorException(code: 0): Attempt to read property \"user_id\" on null at /home/umar/code/emenu/app/Http/Controllers/FrontEndController.php:1096)
+[stacktrace]
+#0 /home/umar/code/emenu/app/Http/Controllers/FrontEndController.php(1096): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError()
+#1 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App\\Http\\Controllers\\FrontEndController->restorant()
+#2 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
+#3 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(262): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#4 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate\\Routing\\Route->runController()
+#5 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(721): Illuminate\\Routing\\Route->run()
+#6 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#7 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#8 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#9 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#10 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle()
+#11 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#12 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle()
+#13 /home/umar/code/emenu/app/Http/Middleware/Language.php(31): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#14 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): App\\Http\\Middleware\\Language->handle()
+#15 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#16 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest()
+#17 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Session\\Middleware\\StartSession->handle()
+#18 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#19 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle()
+#20 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#21 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle()
+#22 /home/umar/code/emenu/packages/mobidonia/laravel-dashboard-installer/src/Middleware/ToInstallMiddleware.php(23): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#23 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): dacoto\\LaravelInstaller\\Middleware\\ToInstallMiddleware->handle()
+#24 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#25 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(723): Illuminate\\Pipeline\\Pipeline->then()
+#26 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(698): Illuminate\\Routing\\Router->runRouteWithinStack()
+#27 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(662): Illuminate\\Routing\\Router->runRoute()
+#28 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(651): Illuminate\\Routing\\Router->dispatchToRoute()
+#29 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch()
+#30 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#31 /home/umar/code/emenu/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#32 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle()
+#33 /home/umar/code/emenu/app/Http/Middleware/LogVisitedUrl.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#34 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): App\\Http\\Middleware\\LogVisitedUrl->handle()
+#35 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#36 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#37 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#38 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#39 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#40 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#41 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#42 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
+#43 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#44 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#45 /home/umar/code/emenu/vendor/fruitcake/laravel-cors/src/HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#46 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
+#47 /home/umar/code/emenu/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#48 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
+#49 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#50 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then()
+#51 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#52 /home/umar/code/emenu/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
+#53 /home/umar/code/emenu/server.php(21): require_once('...')
+#54 {main}
+"} 
+[2024-05-15 16:36:13] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/manifest.json  
+[2024-05-15 16:36:21] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/business  
+[2024-05-15 16:36:21] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/uploads/restorants/8821166c-c8e9-4354-9b6c-602bec1146be_thumbnail.jpg  
+[2024-05-15 16:36:21] local.ERROR: Attempt to read property "user_id" on null {"userId":1,"exception":"[object] (ErrorException(code: 0): Attempt to read property \"user_id\" on null at /home/umar/code/emenu/app/Http/Controllers/FrontEndController.php:1096)
+[stacktrace]
+#0 /home/umar/code/emenu/app/Http/Controllers/FrontEndController.php(1096): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError()
+#1 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App\\Http\\Controllers\\FrontEndController->restorant()
+#2 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
+#3 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(262): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#4 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate\\Routing\\Route->runController()
+#5 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(721): Illuminate\\Routing\\Route->run()
+#6 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#7 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#8 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#9 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#10 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle()
+#11 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#12 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle()
+#13 /home/umar/code/emenu/app/Http/Middleware/Language.php(31): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#14 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): App\\Http\\Middleware\\Language->handle()
+#15 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#16 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest()
+#17 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Session\\Middleware\\StartSession->handle()
+#18 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#19 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle()
+#20 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#21 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle()
+#22 /home/umar/code/emenu/packages/mobidonia/laravel-dashboard-installer/src/Middleware/ToInstallMiddleware.php(23): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#23 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): dacoto\\LaravelInstaller\\Middleware\\ToInstallMiddleware->handle()
+#24 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#25 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(723): Illuminate\\Pipeline\\Pipeline->then()
+#26 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(698): Illuminate\\Routing\\Router->runRouteWithinStack()
+#27 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(662): Illuminate\\Routing\\Router->runRoute()
+#28 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(651): Illuminate\\Routing\\Router->dispatchToRoute()
+#29 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch()
+#30 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#31 /home/umar/code/emenu/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#32 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle()
+#33 /home/umar/code/emenu/app/Http/Middleware/LogVisitedUrl.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#34 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): App\\Http\\Middleware\\LogVisitedUrl->handle()
+#35 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#36 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#37 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#38 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#39 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#40 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#41 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#42 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
+#43 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#44 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#45 /home/umar/code/emenu/vendor/fruitcake/laravel-cors/src/HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#46 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
+#47 /home/umar/code/emenu/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#48 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
+#49 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#50 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then()
+#51 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#52 /home/umar/code/emenu/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
+#53 /home/umar/code/emenu/server.php(21): require_once('...')
+#54 {main}
+"} 
+[2024-05-15 16:36:21] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/uploads/restorants/049424e6-fbc6-4220-bb1c-153ba713bcc1_thumbnail.jpg  
+[2024-05-15 16:36:21] local.ERROR: Attempt to read property "user_id" on null {"userId":1,"exception":"[object] (ErrorException(code: 0): Attempt to read property \"user_id\" on null at /home/umar/code/emenu/app/Http/Controllers/FrontEndController.php:1096)
+[stacktrace]
+#0 /home/umar/code/emenu/app/Http/Controllers/FrontEndController.php(1096): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError()
+#1 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App\\Http\\Controllers\\FrontEndController->restorant()
+#2 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction()
+#3 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(262): Illuminate\\Routing\\ControllerDispatcher->dispatch()
+#4 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate\\Routing\\Route->runController()
+#5 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(721): Illuminate\\Routing\\Route->run()
+#6 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
+#7 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#8 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
+#9 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#10 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle()
+#11 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#12 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle()
+#13 /home/umar/code/emenu/app/Http/Middleware/Language.php(31): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#14 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): App\\Http\\Middleware\\Language->handle()
+#15 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#16 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest()
+#17 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Session\\Middleware\\StartSession->handle()
+#18 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#19 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle()
+#20 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#21 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle()
+#22 /home/umar/code/emenu/packages/mobidonia/laravel-dashboard-installer/src/Middleware/ToInstallMiddleware.php(23): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#23 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): dacoto\\LaravelInstaller\\Middleware\\ToInstallMiddleware->handle()
+#24 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#25 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(723): Illuminate\\Pipeline\\Pipeline->then()
+#26 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(698): Illuminate\\Routing\\Router->runRouteWithinStack()
+#27 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(662): Illuminate\\Routing\\Router->runRoute()
+#28 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Routing/Router.php(651): Illuminate\\Routing\\Router->dispatchToRoute()
+#29 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(167): Illuminate\\Routing\\Router->dispatch()
+#30 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
+#31 /home/umar/code/emenu/vendor/barryvdh/laravel-debugbar/src/Middleware/InjectDebugbar.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#32 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Barryvdh\\Debugbar\\Middleware\\InjectDebugbar->handle()
+#33 /home/umar/code/emenu/app/Http/Middleware/LogVisitedUrl.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#34 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): App\\Http\\Middleware\\LogVisitedUrl->handle()
+#35 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#36 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#37 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
+#38 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#39 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
+#40 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
+#41 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#42 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
+#43 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#44 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
+#45 /home/umar/code/emenu/vendor/fruitcake/laravel-cors/src/HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#46 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle()
+#47 /home/umar/code/emenu/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#48 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle()
+#49 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
+#50 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(142): Illuminate\\Pipeline\\Pipeline->then()
+#51 /home/umar/code/emenu/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#52 /home/umar/code/emenu/public/index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle()
+#53 /home/umar/code/emenu/server.php(21): require_once('...')
+#54 {main}
+"} 
+[2024-05-15 16:36:21] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/manifest.json  
+[2024-05-15 16:36:26] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/restaurants/loginas/199  
+[2024-05-15 16:36:26] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/home  
+[2024-05-15 16:36:27] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/salesvalue  
+[2024-05-15 16:36:27] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/restaurantslocations  
+[2024-05-15 16:36:28] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/_debugbar/open?id=X71bfd6dc5d20bdc4554a2f61d113431f&op=get  
+[2024-05-15 16:36:28] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/_debugbar/open?id=Xc3558608227b974f7b3dd8e256f39bd6&op=get  
+[2024-05-15 16:36:28] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/driverlocations  
+[2024-05-15 16:36:30] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/live  
+[2024-05-15 16:36:30] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/_debugbar/open?id=X89188891bef31c0f7015eb9cbe99c3f5&op=get  
+[2024-05-15 16:36:31] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/liveapi  
+[2024-05-15 16:36:31] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/_debugbar/open?id=X327e22e9344274a429507d4e2e6fbd8a&op=get  
+[2024-05-15 16:36:32] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/live  
+[2024-05-15 16:36:33] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/liveapi  
+[2024-05-15 16:36:33] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/_debugbar/open?id=Xd3461ffcf35faafa0710be5a0a6fb7c0&op=get  
+[2024-05-15 16:36:45] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/liveapi  
+[2024-05-15 16:36:50] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/_debugbar/open?id=Xa2c2056663e4b64e345b563fd2bdeae7&op=get  
+[2024-05-15 16:36:56] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/liveapi  
+[2024-05-15 16:37:03] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/_debugbar/open?id=X8b53fdf0cc2bdd5d31f648289aca5b62&op=get  
+[2024-05-15 16:37:07] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/liveapi  
+[2024-05-15 16:37:11] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/_debugbar/open?id=X2f2a64a9214f4182b2bc55052186ae56&op=get  
+[2024-05-15 16:37:13] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/liveapi  
+[2024-05-15 16:37:13] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/_debugbar/open?id=X14304624fc48c4d14e2db4d3ba247921&op=get  
+[2024-05-15 18:52:35] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/liveapi  
+[2024-05-15 18:52:35] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/_debugbar/open?id=X3f3cc45b0a225dd4192f275498bc3658&op=get  
+[2024-05-15 18:52:45] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/liveapi  
+[2024-05-15 18:52:45] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/_debugbar/open?id=Xb125031631b219c1eeb1d1da391faed9&op=get  
+[2024-05-15 18:52:56] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/liveapi  
+[2024-05-15 18:52:56] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/_debugbar/open?id=X99423c4e4d6dc81d66029f1ef390393e&op=get  
+[2024-05-15 18:53:06] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/liveapi  
+[2024-05-15 18:53:07] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/_debugbar/open?id=X2beb2784a9fe87b8da1c2dcecebe1631&op=get  
+[2024-05-15 18:53:16] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/liveapi  
+[2024-05-15 18:53:16] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/_debugbar/open?id=X9b4218714edb04f805b906a98a179921&op=get  
+[2024-05-15 18:53:26] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/liveapi  
+[2024-05-15 18:53:26] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/_debugbar/open?id=Xabc4ab33eeda574d13d51333a9db4820&op=get  
+[2024-05-15 18:53:36] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/liveapi  
+[2024-05-15 18:53:36] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/_debugbar/open?id=Xd3a75110df93e6cc4ab355f29fb7c6ed&op=get  
+[2024-05-15 18:53:46] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/liveapi  
+[2024-05-15 18:53:46] local.INFO: \n\n\n\n\n--> ---> ----> Visited URL: http://127.0.0.1:8001/_debugbar/open?id=Xefde2e679d8dc7b11266f367d8abdbc5&op=get  

@@ -1,0 +1,40 @@
+{
+    "alias": "twilio",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Twilio\\Providers\\Main"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "vendor_fields": [
+        {
+            "separator": "Twilio",
+            "title": "Account SID",
+            "key": "account_sid",
+            "type": "text",
+            "value": "",
+            "ftype": "input",
+            "placeholder": "Twilio Account SID"
+        },
+        {
+            "title": "Auth Token",
+            "key": "auth_token",
+            "type": "text",
+            "value": "",
+            "ftype": "input",
+            "placeholder": "Twilio Auth Token"
+        },
+        {
+            "title": "From number",
+            "key": "from_number",
+            "type": "text",
+            "value": "",
+            "ftype": "input",
+            "placeholder": "Twilio From number"
+        }
+    ]
+}

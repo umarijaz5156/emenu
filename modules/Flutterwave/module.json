@@ -1,0 +1,52 @@
+{
+    "alias": "flutterwave",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "isPaymentModule":true,
+    "order": 0,
+    "providers": [
+        "Modules\\Flutterwave\\Providers\\Main"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "global_fields":[
+    {
+        "separator":"Flutterwave configuration",
+        "title": "Enable Flutterwave for payments when ordering",
+        "key": "ENABLE_FLUTTERWAVE",
+        "ftype": "bool",
+        "value":false
+    },
+    {
+        "title": "System will use",
+        "key": "VENDORS_OR_ADMIN_FLUTTERWAVE",
+        "ftype":"select",
+        "onlyin":"qrsaas",
+        "value":"admin",
+        "data":{
+            "admin":"Admin defined Flutterwave",
+            "vendor":"Vendor defined Flutterwave"
+        }
+    },
+    {
+        "title":"Flutterwave Public Key", 
+        "key":"FLUTTERWAVE_PUBLIC_KEY", 
+        "value":""
+    }],
+    "vendor_fields":[{
+        "separator":"FlutterWave configuration",
+        "title": "Enable FlutterWave for payments when ordering",
+        "key": "flutterwave_enable",
+        "ftype": "bool",
+        "value":false,
+        "onlyin":"qrsaas"
+    },
+    {
+        "title":"Flutter public key", 
+        "key":"flutterwave_public_key", 
+        "value":"",
+        "onlyin":"qrsaas"
+    }]
+}

@@ -1,0 +1,52 @@
+{
+    "alias": "paystack",
+    "description": "",
+    "keywords": [],
+    "version":"2.3",
+    "active": 1,
+    "isPaymentModule":true,
+    "order": 0,
+    "providers": [
+        "Modules\\Paystack\\Providers\\Main"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "global_fields":[
+        {
+            "separator":"Paystack configuration",
+            "title": "Enable Paystack for payments when ordering",
+            "key": "ENABLE_PAYSTACK",
+            "ftype": "bool",
+            "value": false
+        },{
+            "title": "System will use",
+            "key": "VENDORS_OR_ADMIN_PAYSTACK",
+            "ftype": "select",
+            "value": "admin",
+            "data":{
+                "admin":"Admin defined Paystack",
+                "vendor":"Vendor defined Paystack"
+            }
+        },{
+            "title":"Paystack Secret Key", 
+            "key":"PAYSTACK_SECRET_KEY", 
+            "value":""
+        }
+    ],
+    "vendor_fields":[
+        {
+            "separator":"Paystack configuration",
+            "title": "Enable Paystack for payments when ordering",
+            "key": "paystack_enable",
+            "ftype": "bool",
+            "value": false,
+            "onlyin": "qrsaas"
+        },{
+            "title":"Paystack Secret Key", 
+            "key":"paystack_secretKey", 
+            "value":"",
+            "onlyin": "qrsaas"
+        }
+    ]
+}

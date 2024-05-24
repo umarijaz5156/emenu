@@ -1,0 +1,1244 @@
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+DROP TABLE IF EXISTS `address`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `address` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `address` varchar(191) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `lat` varchar(191) NOT NULL,
+  `lng` varchar(191) NOT NULL,
+  `active` tinyint(1) NOT NULL DEFAULT 1,
+  `user_id` bigint(20) unsigned NOT NULL,
+  `apartment` varchar(191) DEFAULT NULL,
+  `intercom` varchar(191) DEFAULT NULL,
+  `floor` varchar(191) DEFAULT NULL,
+  `entry` varchar(191) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `address_user_id_foreign` (`user_id`),
+  CONSTRAINT `address_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `banners`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `banners` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(191) NOT NULL,
+  `img` varchar(191) NOT NULL DEFAULT '',
+  `type` int(11) NOT NULL DEFAULT 0 COMMENT '0 - Vendor, 1 - Blog',
+  `vendor_id` bigint(20) unsigned DEFAULT NULL,
+  `page_id` bigint(20) unsigned DEFAULT NULL,
+  `active_from` date NOT NULL,
+  `active_to` date NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `banners_vendor_id_foreign` (`vendor_id`),
+  KEY `banners_page_id_foreign` (`page_id`),
+  CONSTRAINT `banners_page_id_foreign` FOREIGN KEY (`page_id`) REFERENCES `pages` (`id`),
+  CONSTRAINT `banners_vendor_id_foreign` FOREIGN KEY (`vendor_id`) REFERENCES `companies` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `cart_storage`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `cart_storage` (
+  `id` varchar(191) NOT NULL,
+  `cart_data` longtext NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `vendor_id` bigint(20) NOT NULL,
+  `user_id` bigint(20) NOT NULL,
+  `type` int(11) NOT NULL,
+  `receipt_number` varchar(191) NOT NULL,
+  `kds_finished` int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`),
+  KEY `cart_storage_id_index` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `categories`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `categories` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(191) NOT NULL,
+  `restorant_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `order_index` int(11) NOT NULL DEFAULT 0,
+  `active` int(11) NOT NULL DEFAULT 1,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `categories_restorant_id_foreign` (`restorant_id`),
+  CONSTRAINT `categories_restorant_id_foreign` FOREIGN KEY (`restorant_id`) REFERENCES `companies` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `cities`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `cities` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `name` varchar(191) NOT NULL,
+  `alias` varchar(191) NOT NULL,
+  `image` varchar(191) NOT NULL,
+  `header_title` varchar(191) NOT NULL,
+  `header_subtitle` varchar(191) NOT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `cities_alias_unique` (`alias`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `companies`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `companies` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `name` varchar(191) NOT NULL,
+  `subdomain` varchar(191) DEFAULT NULL,
+  `logo` varchar(191) NOT NULL DEFAULT '',
+  `cover` varchar(191) NOT NULL DEFAULT '',
+  `active` tinyint(1) NOT NULL DEFAULT 1,
+  `user_id` bigint(20) unsigned NOT NULL,
+  `lat` varchar(191) NOT NULL,
+  `lng` varchar(191) NOT NULL,
+  `address` varchar(191) NOT NULL,
+  `phone` varchar(191) NOT NULL,
+  `minimum` varchar(191) NOT NULL DEFAULT '0',
+  `description` varchar(500) NOT NULL DEFAULT '',
+  `fee` double(8,2) NOT NULL DEFAULT 0.00,
+  `static_fee` double(8,2) NOT NULL DEFAULT 0.00,
+  `radius` varchar(800) NOT NULL DEFAULT '',
+  `is_featured` tinyint(1) NOT NULL DEFAULT 0,
+  `city_id` int(11) DEFAULT NULL,
+  `views` int(11) NOT NULL DEFAULT 0,
+  `can_pickup` int(11) NOT NULL DEFAULT 1,
+  `can_deliver` int(11) NOT NULL DEFAULT 1,
+  `self_deliver` int(11) NOT NULL DEFAULT 0,
+  `free_deliver` int(11) NOT NULL DEFAULT 0,
+  `whatsapp_phone` varchar(191) DEFAULT NULL,
+  `fb_username` varchar(191) DEFAULT NULL,
+  `do_covertion` int(11) NOT NULL DEFAULT 1,
+  `currency` varchar(191) NOT NULL,
+  `payment_info` varchar(191) NOT NULL,
+  `mollie_payment_key` varchar(191) NOT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `can_dinein` int(11) NOT NULL DEFAULT 1,
+  `show_price` int(11) NOT NULL DEFAULT 1,
+  `badge_1` varchar(191) DEFAULT NULL,
+  `badge_2` varchar(191) DEFAULT NULL,
+  `badge_3` varchar(191) DEFAULT NULL,
+  `badge_4` varchar(191) DEFAULT NULL,
+  `badge_5` varchar(191) DEFAULT NULL,
+  `GoogleReview` varchar(191) DEFAULT NULL,
+  `TripAdvisor` varchar(191) DEFAULT NULL,
+  `qr_count` int(11) DEFAULT NULL,
+  `staff_count` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `restorants_name_unique` (`name`),
+  UNIQUE KEY `restorants_subdomain_unique` (`subdomain`),
+  KEY `restorants_user_id_foreign` (`user_id`),
+  CONSTRAINT `restorants_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `compare_plan_name`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `compare_plan_name` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `plan_name` varchar(191) NOT NULL,
+  `cost_saving_eco` varchar(191) NOT NULL DEFAULT '',
+  `no_setup_cost` tinyint(1) NOT NULL,
+  `eco_friendly` tinyint(1) NOT NULL,
+  `boost_your_business` varchar(191) NOT NULL DEFAULT '',
+  `cut_opt_cost` tinyint(1) NOT NULL,
+  `detailed_reports` tinyint(1) NOT NULL,
+  `increase_sales` tinyint(1) NOT NULL,
+  `savings_foh` tinyint(1) NOT NULL,
+  `order_limit` varchar(191) NOT NULL DEFAULT '',
+  `unlimited_product` tinyint(1) NOT NULL,
+  `order_management` varchar(191) NOT NULL DEFAULT '',
+  `delivery_pick_dine` tinyint(1) NOT NULL,
+  `payments_gateway` tinyint(1) NOT NULL,
+  `data_analytics` tinyint(1) NOT NULL,
+  `engage_delight` varchar(191) NOT NULL DEFAULT '',
+  `connect_customers` tinyint(1) NOT NULL,
+  `control_presence` tinyint(1) NOT NULL,
+  `customer_supports` tinyint(1) NOT NULL,
+  `collect_reviews` tinyint(1) NOT NULL,
+  `elevate_dining` varchar(191) NOT NULL DEFAULT '',
+  `add_items` int(11) NOT NULL DEFAULT 0,
+  `browse_menu` tinyint(1) NOT NULL,
+  `call_waiter` tinyint(1) NOT NULL,
+  `create_dining_experience` tinyint(1) NOT NULL,
+  `dynamic_pricing` tinyint(1) NOT NULL,
+  `qr_code_menu` tinyint(1) NOT NULL,
+  `quick_search` tinyint(1) NOT NULL,
+  `unique_qr_code` int(11) NOT NULL,
+  `expand_your_service` varchar(191) NOT NULL DEFAULT '',
+  `expand_features` tinyint(1) NOT NULL,
+  `globalize_business` varchar(191) NOT NULL DEFAULT '',
+  `custom_domain` tinyint(1) NOT NULL,
+  `menu_generator` tinyint(1) NOT NULL,
+  `translation_languages` int(11) NOT NULL,
+  `menu_control` varchar(191) NOT NULL DEFAULT '',
+  `allergens` tinyint(1) NOT NULL,
+  `menu_management` tinyint(1) NOT NULL,
+  `operational_change` tinyint(1) NOT NULL,
+  `adaptable_support` varchar(191) NOT NULL DEFAULT '',
+  `multiple_accounts` int(11) NOT NULL,
+  `support_tickets` tinyint(1) NOT NULL,
+  `priority_support` tinyint(1) NOT NULL,
+  `qr_scans` int(11) NOT NULL,
+  `design` varchar(191) NOT NULL DEFAULT '',
+  `suitable_business` tinyint(1) NOT NULL,
+  `add_images` tinyint(1) NOT NULL,
+  `add_logo` tinyint(1) NOT NULL,
+  `customizable_design` tinyint(1) NOT NULL,
+  `free_themes` varchar(191) NOT NULL DEFAULT 'Default',
+  `instants_updates` tinyint(1) NOT NULL,
+  `personalise_menu` tinyint(1) NOT NULL,
+  `view_from_device` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `compare_plan_name_plan_name_unique` (`plan_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `configs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `configs` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `value` text DEFAULT NULL,
+  `key` varchar(191) NOT NULL,
+  `model_type` varchar(191) NOT NULL,
+  `model_id` bigint(20) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `contact_messages`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `contact_messages` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `full_name` varchar(191) NOT NULL,
+  `restaurant_name` varchar(191) NOT NULL,
+  `phone_number` varchar(191) NOT NULL,
+  `subject` varchar(191) NOT NULL,
+  `message` text NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `coupons`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `coupons` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(191) NOT NULL,
+  `code` varchar(8) NOT NULL,
+  `restaurant_id` bigint(20) unsigned NOT NULL,
+  `type` int(11) NOT NULL DEFAULT 1 COMMENT '0 - Fixed, 1 - Percentage',
+  `price` double NOT NULL,
+  `active_from` date NOT NULL,
+  `active_to` date NOT NULL,
+  `limit_to_num_uses` int(11) NOT NULL,
+  `used_count` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `coupons_code_unique` (`code`),
+  KEY `coupons_restaurant_id_foreign` (`restaurant_id`),
+  CONSTRAINT `coupons_restaurant_id_foreign` FOREIGN KEY (`restaurant_id`) REFERENCES `companies` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `domains`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `domains` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `domain` varchar(255) NOT NULL,
+  `tenant_id` varchar(191) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `domains_domain_unique` (`domain`),
+  KEY `domains_tenant_id_foreign` (`tenant_id`),
+  CONSTRAINT `domains_tenant_id_foreign` FOREIGN KEY (`tenant_id`) REFERENCES `tenants` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `expenses`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `expenses` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `date` date NOT NULL,
+  `reference` varchar(191) NOT NULL,
+  `description` text NOT NULL,
+  `amount` double NOT NULL,
+  `restaurant_id` bigint(20) unsigned DEFAULT NULL,
+  `expenses_category_id` bigint(20) unsigned DEFAULT NULL,
+  `expenses_vendor_id` bigint(20) unsigned DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `expenses_restaurant_id_foreign` (`restaurant_id`),
+  KEY `expenses_expenses_category_id_foreign` (`expenses_category_id`),
+  KEY `expenses_expenses_vendor_id_foreign` (`expenses_vendor_id`),
+  CONSTRAINT `expenses_expenses_category_id_foreign` FOREIGN KEY (`expenses_category_id`) REFERENCES `expenses_category` (`id`),
+  CONSTRAINT `expenses_expenses_vendor_id_foreign` FOREIGN KEY (`expenses_vendor_id`) REFERENCES `expenses_vendor` (`id`),
+  CONSTRAINT `expenses_restaurant_id_foreign` FOREIGN KEY (`restaurant_id`) REFERENCES `companies` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `expenses_category`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `expenses_category` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(191) NOT NULL,
+  `code` varchar(191) NOT NULL,
+  `restaurant_id` bigint(20) unsigned DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `expenses_category_restaurant_id_foreign` (`restaurant_id`),
+  CONSTRAINT `expenses_category_restaurant_id_foreign` FOREIGN KEY (`restaurant_id`) REFERENCES `companies` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `expenses_vendor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `expenses_vendor` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(191) NOT NULL,
+  `code` varchar(191) NOT NULL,
+  `restaurant_id` bigint(20) unsigned DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `expenses_vendor_restaurant_id_foreign` (`restaurant_id`),
+  CONSTRAINT `expenses_vendor_restaurant_id_foreign` FOREIGN KEY (`restaurant_id`) REFERENCES `companies` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `extras`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `extras` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `item_id` bigint(20) unsigned NOT NULL,
+  `price` double(8,2) NOT NULL,
+  `name` varchar(191) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `extra_for_all_variants` int(11) NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`),
+  KEY `extras_item_id_foreign` (`item_id`),
+  CONSTRAINT `extras_item_id_foreign` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `hours`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `hours` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `0_from` varchar(191) DEFAULT NULL,
+  `0_to` varchar(191) DEFAULT NULL,
+  `1_from` varchar(191) DEFAULT NULL,
+  `1_to` varchar(191) DEFAULT NULL,
+  `2_from` varchar(191) DEFAULT NULL,
+  `2_to` varchar(191) DEFAULT NULL,
+  `3_from` varchar(191) DEFAULT NULL,
+  `3_to` varchar(191) DEFAULT NULL,
+  `4_from` varchar(191) DEFAULT NULL,
+  `4_to` varchar(191) DEFAULT NULL,
+  `5_from` varchar(191) DEFAULT NULL,
+  `5_to` varchar(191) DEFAULT NULL,
+  `6_from` varchar(191) DEFAULT NULL,
+  `6_to` varchar(191) DEFAULT NULL,
+  `restorant_id` bigint(20) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `hours_restorant_id_foreign` (`restorant_id`),
+  CONSTRAINT `hours_restorant_id_foreign` FOREIGN KEY (`restorant_id`) REFERENCES `companies` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `item_has_allergens`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `item_has_allergens` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `item_id` bigint(20) unsigned DEFAULT NULL,
+  `allergen_id` bigint(20) unsigned DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `items`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `items` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` text NOT NULL,
+  `description` text NOT NULL,
+  `image` varchar(191) NOT NULL,
+  `price` double NOT NULL,
+  `category_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `available` int(11) NOT NULL DEFAULT 1,
+  `has_variants` int(11) NOT NULL DEFAULT 0,
+  `vat` double(8,2) DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `enable_system_variants` int(11) NOT NULL DEFAULT 0,
+  `discounted_price` double NOT NULL DEFAULT 0,
+  `qty` int(11) NOT NULL DEFAULT 1,
+  `qty_management` int(11) NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`),
+  KEY `items_category_id_foreign` (`category_id`),
+  CONSTRAINT `items_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `languages`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `languages` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(191) DEFAULT NULL,
+  `language` varchar(191) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `localmenus`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `localmenus` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `restaurant_id` bigint(20) unsigned NOT NULL,
+  `language` varchar(3) NOT NULL,
+  `languageName` varchar(191) NOT NULL,
+  `default` int(11) NOT NULL DEFAULT 0 COMMENT '0 - No, 1 - Yes',
+  PRIMARY KEY (`id`),
+  KEY `localmenus_restaurant_id_foreign` (`restaurant_id`),
+  CONSTRAINT `localmenus_restaurant_id_foreign` FOREIGN KEY (`restaurant_id`) REFERENCES `companies` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `migrations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `migrations` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `migration` varchar(191) NOT NULL,
+  `batch` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `model_has_permissions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `model_has_permissions` (
+  `permission_id` int(10) unsigned NOT NULL,
+  `model_type` varchar(191) NOT NULL,
+  `model_id` bigint(20) unsigned NOT NULL,
+  PRIMARY KEY (`permission_id`,`model_id`,`model_type`),
+  KEY `model_has_permissions_model_id_model_type_index` (`model_id`,`model_type`),
+  CONSTRAINT `model_has_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `model_has_roles`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `model_has_roles` (
+  `role_id` int(10) unsigned NOT NULL,
+  `model_type` varchar(191) NOT NULL,
+  `model_id` bigint(20) unsigned NOT NULL,
+  PRIMARY KEY (`role_id`,`model_id`,`model_type`),
+  KEY `model_has_roles_model_id_model_type_index` (`model_id`,`model_type`),
+  CONSTRAINT `model_has_roles_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `notifications`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `notifications` (
+  `id` char(36) NOT NULL,
+  `type` varchar(191) NOT NULL,
+  `notifiable_type` varchar(191) NOT NULL,
+  `notifiable_id` bigint(20) unsigned NOT NULL,
+  `data` text NOT NULL,
+  `read_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `notifications_notifiable_type_notifiable_id_index` (`notifiable_type`,`notifiable_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `options`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `options` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `item_id` bigint(20) unsigned NOT NULL,
+  `name` varchar(191) NOT NULL,
+  `options` varchar(500) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `options_item_id_foreign` (`item_id`),
+  CONSTRAINT `options_item_id_foreign` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `order_has_items`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `order_has_items` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `order_id` bigint(20) unsigned NOT NULL,
+  `item_id` bigint(20) unsigned NOT NULL,
+  `qty` int(11) NOT NULL DEFAULT 1,
+  `extras` varchar(800) DEFAULT '',
+  `vat` double(8,2) DEFAULT 0.00,
+  `vatvalue` double(8,2) DEFAULT 0.00,
+  `variant_price` double DEFAULT NULL,
+  `variant_name` varchar(191) NOT NULL DEFAULT '',
+  `kds_finished` int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`),
+  KEY `order_has_items_order_id_foreign` (`order_id`),
+  KEY `order_has_items_item_id_foreign` (`item_id`),
+  CONSTRAINT `order_has_items_item_id_foreign` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`),
+  CONSTRAINT `order_has_items_order_id_foreign` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `order_has_status`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `order_has_status` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `order_id` bigint(20) unsigned NOT NULL,
+  `status_id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) unsigned NOT NULL,
+  `comment` varchar(500) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `order_has_status_order_id_foreign` (`order_id`),
+  KEY `order_has_status_status_id_foreign` (`status_id`),
+  KEY `order_has_status_user_id_foreign` (`user_id`),
+  CONSTRAINT `order_has_status_order_id_foreign` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
+  CONSTRAINT `order_has_status_status_id_foreign` FOREIGN KEY (`status_id`) REFERENCES `status` (`id`),
+  CONSTRAINT `order_has_status_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `orders` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `address_id` bigint(20) unsigned DEFAULT NULL,
+  `client_id` bigint(20) unsigned DEFAULT NULL,
+  `restorant_id` bigint(20) unsigned NOT NULL,
+  `driver_id` bigint(20) unsigned DEFAULT NULL,
+  `delivery_price` double NOT NULL,
+  `order_price` double NOT NULL,
+  `payment_method` varchar(191) DEFAULT NULL,
+  `payment_status` varchar(191) DEFAULT NULL,
+  `comment` varchar(500) NOT NULL,
+  `lat` varchar(191) DEFAULT NULL,
+  `lng` varchar(191) DEFAULT NULL,
+  `srtipe_payment_id` varchar(191) DEFAULT NULL,
+  `fee` double(8,2) NOT NULL DEFAULT 0.00,
+  `fee_value` double NOT NULL DEFAULT 0,
+  `static_fee` double NOT NULL DEFAULT 0,
+  `delivery_method` int(11) NOT NULL DEFAULT 1 COMMENT '1- Delivery, 2- Pickup',
+  `delivery_pickup_interval` varchar(191) NOT NULL DEFAULT '',
+  `vatvalue` double DEFAULT 0,
+  `payment_processor_fee` double(8,2) NOT NULL DEFAULT 0.00,
+  `time_to_prepare` int(11) DEFAULT NULL,
+  `table_id` bigint(20) unsigned DEFAULT NULL,
+  `phone` varchar(191) DEFAULT NULL,
+  `whatsapp_address` varchar(191) DEFAULT NULL,
+  `payment_link` varchar(191) NOT NULL,
+  `employee_id` bigint(20) unsigned DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `md` varchar(191) NOT NULL DEFAULT '',
+  `coupon` varchar(191) DEFAULT NULL,
+  `discount` double NOT NULL DEFAULT 0,
+  `kds_finished` int(11) NOT NULL DEFAULT 0,
+  `id_per_vendor` varchar(191) DEFAULT '',
+  `tip` double(8,2) NOT NULL DEFAULT 0.00,
+  PRIMARY KEY (`id`),
+  KEY `orders_address_id_foreign` (`address_id`),
+  KEY `orders_client_id_foreign` (`client_id`),
+  KEY `orders_restorant_id_foreign` (`restorant_id`),
+  KEY `orders_driver_id_foreign` (`driver_id`),
+  KEY `orders_employee_id_foreign` (`employee_id`),
+  CONSTRAINT `orders_address_id_foreign` FOREIGN KEY (`address_id`) REFERENCES `address` (`id`),
+  CONSTRAINT `orders_client_id_foreign` FOREIGN KEY (`client_id`) REFERENCES `users` (`id`),
+  CONSTRAINT `orders_driver_id_foreign` FOREIGN KEY (`driver_id`) REFERENCES `users` (`id`),
+  CONSTRAINT `orders_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `users` (`id`),
+  CONSTRAINT `orders_restorant_id_foreign` FOREIGN KEY (`restorant_id`) REFERENCES `companies` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `pages`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pages` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `title` varchar(191) NOT NULL,
+  `content` text NOT NULL,
+  `showAsLink` tinyint(1) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `password_resets`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `password_resets` (
+  `email` varchar(191) NOT NULL,
+  `token` varchar(191) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  KEY `password_resets_email_index` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `paths`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `paths` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `lat` varchar(191) DEFAULT NULL,
+  `lng` varchar(191) DEFAULT NULL,
+  `user_id` bigint(20) unsigned NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `payments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `payments` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(191) NOT NULL,
+  `stripe_id` varchar(191) DEFAULT NULL,
+  `user_id` bigint(20) unsigned NOT NULL,
+  `amount` double(8,2) NOT NULL,
+  `currency` varchar(191) NOT NULL,
+  `country` varchar(191) NOT NULL,
+  `provider` varchar(191) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `payments_user_id_foreign` (`user_id`),
+  CONSTRAINT `payments_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `period_discounts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `period_discounts` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `item_id` bigint(20) unsigned DEFAULT NULL,
+  `start` time NOT NULL,
+  `end` time NOT NULL,
+  `discount_type` varchar(191) NOT NULL,
+  `amount` double(16,2) NOT NULL,
+  `priority` int(11) NOT NULL DEFAULT 1,
+  `day` enum('monday','tuesday','wednesday','thursday','friday','saturday','sunday') NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `period_discounts_item_id_foreign` (`item_id`),
+  CONSTRAINT `period_discounts_item_id_foreign` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `period_discounts_for_restourants`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `period_discounts_for_restourants` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `restourant_id` bigint(20) unsigned DEFAULT NULL,
+  `start` time NOT NULL,
+  `end` time NOT NULL,
+  `discount_type` varchar(191) NOT NULL DEFAULT 'percent',
+  `amount` double(16,2) NOT NULL,
+  `priority` int(11) NOT NULL DEFAULT 2,
+  `day` enum('monday','tuesday','wednesday','thursday','friday','saturday','sunday') NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `period_discounts_for_restourants_restourant_id_foreign` (`restourant_id`),
+  CONSTRAINT `period_discounts_for_restourants_restourant_id_foreign` FOREIGN KEY (`restourant_id`) REFERENCES `companies` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `permissions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `permissions` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(191) NOT NULL,
+  `guard_name` varchar(191) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `plan`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `plan` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(191) NOT NULL,
+  `limit_items` int(11) NOT NULL DEFAULT 0 COMMENT '0 is unlimited',
+  `limit_orders` int(11) NOT NULL DEFAULT 0 COMMENT '0 is unlimited',
+  `price` double NOT NULL,
+  `period` int(11) NOT NULL DEFAULT 1 COMMENT '1 - monthly, 2-anually',
+  `paddle_id` varchar(191) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `description` varchar(555) NOT NULL DEFAULT '',
+  `features` varchar(555) NOT NULL DEFAULT '',
+  `limit_views` int(11) NOT NULL DEFAULT 0 COMMENT '0 is unlimited',
+  `enable_ordering` int(11) NOT NULL DEFAULT 1,
+  `stripe_id` varchar(191) NOT NULL,
+  `paypal_id` varchar(191) DEFAULT NULL,
+  `mollie_id` varchar(191) DEFAULT NULL,
+  `paystack_id` varchar(191) DEFAULT NULL,
+  `razorpay_id` varchar(191) NOT NULL DEFAULT '',
+  `limit_staff` int(11) DEFAULT NULL,
+  `limit_qrcode` int(11) DEFAULT NULL,
+  `limit_tables` int(11) DEFAULT NULL,
+  `tenant_id` varchar(191) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `posts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `posts` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `post_type` varchar(191) DEFAULT NULL,
+  `title` varchar(191) DEFAULT NULL,
+  `subtitle` varchar(191) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `image` varchar(191) DEFAULT NULL,
+  `link` varchar(191) DEFAULT NULL,
+  `link_name` varchar(191) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `ratings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ratings` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `rating` int(11) NOT NULL,
+  `rateable_type` varchar(191) NOT NULL,
+  `rateable_id` bigint(20) unsigned NOT NULL,
+  `user_id` bigint(20) unsigned NOT NULL,
+  `order_id` bigint(20) unsigned NOT NULL,
+  `comment` varchar(500) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `ratings_rateable_type_rateable_id_index` (`rateable_type`,`rateable_id`),
+  KEY `ratings_rateable_id_index` (`rateable_id`),
+  KEY `ratings_rateable_type_index` (`rateable_type`),
+  KEY `ratings_user_id_foreign` (`user_id`),
+  KEY `ratings_order_id_foreign` (`order_id`),
+  CONSTRAINT `ratings_order_id_foreign` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`),
+  CONSTRAINT `ratings_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `restoareas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `restoareas` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(191) NOT NULL,
+  `restaurant_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `restoareas_restaurant_id_foreign` (`restaurant_id`),
+  CONSTRAINT `restoareas_restaurant_id_foreign` FOREIGN KEY (`restaurant_id`) REFERENCES `companies` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `role_has_permissions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `role_has_permissions` (
+  `permission_id` int(10) unsigned NOT NULL,
+  `role_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`permission_id`,`role_id`),
+  KEY `role_has_permissions_role_id_foreign` (`role_id`),
+  CONSTRAINT `role_has_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `role_has_permissions_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `roles`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `roles` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(191) NOT NULL,
+  `guard_name` varchar(191) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `settings` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `site_name` varchar(191) NOT NULL,
+  `site_logo` varchar(191) NOT NULL,
+  `search` varchar(191) NOT NULL,
+  `restorant_details_image` varchar(191) NOT NULL DEFAULT '',
+  `restorant_details_cover_image` varchar(191) NOT NULL DEFAULT '',
+  `description` varchar(191) NOT NULL,
+  `header_title` varchar(191) NOT NULL,
+  `header_subtitle` varchar(191) NOT NULL,
+  `currency` varchar(191) NOT NULL DEFAULT 'USD',
+  `facebook` varchar(191) NOT NULL DEFAULT '',
+  `instagram` varchar(191) NOT NULL DEFAULT '',
+  `playstore` varchar(191) NOT NULL DEFAULT '',
+  `appstore` varchar(191) NOT NULL DEFAULT '',
+  `maps_api_key` varchar(191) DEFAULT '',
+  `delivery` double(8,2) NOT NULL DEFAULT 0.00,
+  `typeform` varchar(191) NOT NULL DEFAULT '',
+  `mobile_info_title` varchar(191) NOT NULL DEFAULT '',
+  `mobile_info_subtitle` varchar(191) NOT NULL DEFAULT '',
+  `order_options` varchar(191) NOT NULL DEFAULT '{}',
+  `site_logo_dark` varchar(191) DEFAULT NULL,
+  `order_fields` text DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `simple_delivery_areas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `simple_delivery_areas` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(191) NOT NULL,
+  `cost` double(8,2) NOT NULL,
+  `restaurant_id` bigint(20) unsigned DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `phone` varchar(191) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`),
+  KEY `simple_delivery_areas_restaurant_id_foreign` (`restaurant_id`),
+  CONSTRAINT `simple_delivery_areas_restaurant_id_foreign` FOREIGN KEY (`restaurant_id`) REFERENCES `companies` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `sms_verifications`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sms_verifications` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `contact_number` varchar(191) NOT NULL,
+  `code` varchar(191) NOT NULL,
+  `user_id` bigint(20) unsigned NOT NULL,
+  `status` varchar(191) NOT NULL DEFAULT 'pending',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `sms_verifications_user_id_foreign` (`user_id`),
+  CONSTRAINT `sms_verifications_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `status`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `status` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(191) NOT NULL,
+  `alias` varchar(191) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `status_name_unique` (`name`),
+  UNIQUE KEY `status_alias_unique` (`alias`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `subscription_items`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `subscription_items` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `subscription_id` bigint(20) unsigned NOT NULL,
+  `stripe_id` varchar(191) NOT NULL,
+  `stripe_plan` varchar(191) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `stripe_product` varchar(191) NOT NULL,
+  `stripe_price` varchar(191) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `subscription_items_subscription_id_stripe_plan_unique` (`subscription_id`,`stripe_plan`),
+  KEY `subscription_items_stripe_id_index` (`stripe_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `subscriptions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `subscriptions` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) unsigned NOT NULL,
+  `name` varchar(191) NOT NULL,
+  `stripe_id` varchar(191) NOT NULL,
+  `stripe_status` varchar(191) NOT NULL,
+  `stripe_plan` varchar(191) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `trial_ends_at` timestamp NULL DEFAULT NULL,
+  `ends_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `stripe_price` varchar(191) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `subscriptions_user_id_stripe_status_index` (`user_id`,`stripe_status`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `tables`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tables` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(191) NOT NULL,
+  `size` int(11) NOT NULL DEFAULT 4,
+  `restoarea_id` bigint(20) unsigned DEFAULT NULL,
+  `restaurant_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `x` double(8,2) DEFAULT NULL,
+  `y` double(8,2) DEFAULT NULL,
+  `w` double(8,2) DEFAULT NULL,
+  `h` double(8,2) DEFAULT NULL,
+  `rounded` varchar(191) DEFAULT 'no',
+  PRIMARY KEY (`id`),
+  KEY `tables_restoarea_id_foreign` (`restoarea_id`),
+  KEY `tables_restaurant_id_foreign` (`restaurant_id`),
+  CONSTRAINT `tables_restaurant_id_foreign` FOREIGN KEY (`restaurant_id`) REFERENCES `companies` (`id`),
+  CONSTRAINT `tables_restoarea_id_foreign` FOREIGN KEY (`restoarea_id`) REFERENCES `restoareas` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `tenants`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tenants` (
+  `id` varchar(191) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `data` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL CHECK (json_valid(`data`)),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `translations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `translations` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `language_id` int(10) unsigned NOT NULL,
+  `group` varchar(191) DEFAULT NULL,
+  `key` text NOT NULL,
+  `value` text DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `translations_language_id_foreign` (`language_id`),
+  CONSTRAINT `translations_language_id_foreign` FOREIGN KEY (`language_id`) REFERENCES `languages` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `user_has_categories`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_has_categories` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) unsigned DEFAULT NULL,
+  `category_id` bigint(20) unsigned DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `google_id` char(191) DEFAULT NULL,
+  `fb_id` char(191) DEFAULT NULL,
+  `name` varchar(191) NOT NULL,
+  `email` varchar(191) NOT NULL,
+  `email_verified_at` timestamp NULL DEFAULT NULL,
+  `password` varchar(191) DEFAULT NULL,
+  `api_token` varchar(191) NOT NULL,
+  `phone` varchar(191) DEFAULT NULL,
+  `remember_token` varchar(100) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `active` tinyint(1) NOT NULL DEFAULT 1,
+  `stripe_id` varchar(191) DEFAULT NULL,
+  `card_brand` varchar(191) DEFAULT NULL,
+  `card_last_four` varchar(4) DEFAULT NULL,
+  `trial_ends_at` timestamp NULL DEFAULT NULL,
+  `verification_code` varchar(191) DEFAULT NULL,
+  `phone_verified_at` timestamp NULL DEFAULT NULL,
+  `plan_id` bigint(20) unsigned DEFAULT NULL,
+  `plan_status` varchar(191) NOT NULL DEFAULT '',
+  `cancel_url` varchar(555) NOT NULL DEFAULT '',
+  `update_url` varchar(555) NOT NULL DEFAULT '',
+  `checkout_id` varchar(555) NOT NULL DEFAULT '',
+  `subscription_plan_id` varchar(555) NOT NULL DEFAULT '',
+  `stripe_account` varchar(191) NOT NULL DEFAULT '',
+  `birth_date` varchar(191) NOT NULL DEFAULT '',
+  `lat` varchar(191) DEFAULT NULL,
+  `lng` varchar(191) DEFAULT NULL,
+  `working` int(11) NOT NULL DEFAULT 1,
+  `onorder` int(11) DEFAULT NULL,
+  `numorders` int(11) NOT NULL DEFAULT 0,
+  `rejectedorders` int(11) NOT NULL,
+  `paypal_subscribtion_id` varchar(191) DEFAULT NULL,
+  `mollie_customer_id` varchar(191) DEFAULT NULL,
+  `mollie_mandate_id` varchar(191) DEFAULT NULL,
+  `tax_percentage` decimal(6,4) NOT NULL DEFAULT 0.0000,
+  `extra_billing_information` text DEFAULT NULL,
+  `mollie_subscribtion_id` varchar(191) DEFAULT NULL,
+  `paystack_subscribtion_id` varchar(191) DEFAULT NULL,
+  `paystack_trans_id` varchar(191) DEFAULT NULL,
+  `restaurant_id` bigint(20) unsigned DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `expotoken` text DEFAULT '',
+  `pm_type` varchar(191) DEFAULT NULL,
+  `pm_last_four` varchar(4) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `users_api_token_unique` (`api_token`),
+  UNIQUE KEY `users_verification_code_unique` (`verification_code`),
+  KEY `users_stripe_id_index` (`stripe_id`),
+  KEY `users_restaurant_id_foreign` (`restaurant_id`),
+  CONSTRAINT `users_restaurant_id_foreign` FOREIGN KEY (`restaurant_id`) REFERENCES `companies` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `variants`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `variants` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `price` double NOT NULL,
+  `options` varchar(500) NOT NULL,
+  `image` varchar(191) NOT NULL,
+  `qty` int(11) NOT NULL DEFAULT 0,
+  `enable_qty` int(11) NOT NULL DEFAULT 0,
+  `order` int(11) NOT NULL DEFAULT 0,
+  `item_id` bigint(20) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `is_system` int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`),
+  KEY `variants_item_id_foreign` (`item_id`),
+  CONSTRAINT `variants_item_id_foreign` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `variants_has_extras`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `variants_has_extras` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `variant_id` bigint(20) unsigned NOT NULL,
+  `extra_id` bigint(20) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `variants_has_extras_variant_id_foreign` (`variant_id`),
+  KEY `variants_has_extras_extra_id_foreign` (`extra_id`),
+  CONSTRAINT `variants_has_extras_extra_id_foreign` FOREIGN KEY (`extra_id`) REFERENCES `extras` (`id`),
+  CONSTRAINT `variants_has_extras_variant_id_foreign` FOREIGN KEY (`variant_id`) REFERENCES `variants` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `vendor_has_categories`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `vendor_has_categories` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `vendor_id` bigint(20) unsigned DEFAULT NULL,
+  `category_id` bigint(20) unsigned DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+DROP TABLE IF EXISTS `visits`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `visits` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(191) NOT NULL,
+  `email` varchar(191) DEFAULT NULL,
+  `phone_number` varchar(191) DEFAULT NULL,
+  `note` varchar(191) DEFAULT NULL,
+  `restaurant_id` bigint(20) unsigned NOT NULL,
+  `table_id` bigint(20) unsigned DEFAULT NULL,
+  `by` int(11) NOT NULL DEFAULT 1 COMMENT '1 - Owner, 0 - Client Himself',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `visits_restaurant_id_foreign` (`restaurant_id`),
+  CONSTRAINT `visits_restaurant_id_foreign` FOREIGN KEY (`restaurant_id`) REFERENCES `companies` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+INSERT INTO `migrations` VALUES (1,'2014_10_12_000000_create_users_table',1);
+INSERT INTO `migrations` VALUES (2,'2014_10_12_100000_create_password_resets_table',1);
+INSERT INTO `migrations` VALUES (3,'2018_08_29_200844_create_languages_table',1);
+INSERT INTO `migrations` VALUES (4,'2018_08_29_205156_create_translations_table',1);
+INSERT INTO `migrations` VALUES (5,'2019_05_03_000001_create_customer_columns',1);
+INSERT INTO `migrations` VALUES (6,'2019_05_03_000002_create_subscriptions_table',1);
+INSERT INTO `migrations` VALUES (7,'2019_05_03_000003_create_subscription_items_table',1);
+INSERT INTO `migrations` VALUES (8,'2020_02_06_010033_create_permission_tables',1);
+INSERT INTO `migrations` VALUES (9,'2020_02_06_022212_create_restorants_table',1);
+INSERT INTO `migrations` VALUES (10,'2020_02_09_015116_create_status_table',1);
+INSERT INTO `migrations` VALUES (11,'2020_02_09_152551_create_categories_table',1);
+INSERT INTO `migrations` VALUES (12,'2020_02_09_152656_create_items_table',1);
+INSERT INTO `migrations` VALUES (13,'2020_02_11_052117_create_address_table',1);
+INSERT INTO `migrations` VALUES (14,'2020_02_11_054259_create_orders_table',1);
+INSERT INTO `migrations` VALUES (15,'2020_02_20_094727_create_settings_table',1);
+INSERT INTO `migrations` VALUES (16,'2020_03_25_134914_create_pages_table',1);
+INSERT INTO `migrations` VALUES (17,'2020_04_03_143518_update_settings_table',1);
+INSERT INTO `migrations` VALUES (18,'2020_04_10_202027_create_payments_table',1);
+INSERT INTO `migrations` VALUES (19,'2020_04_11_165819_update_table_orders',1);
+INSERT INTO `migrations` VALUES (20,'2020_04_22_105556_update_items_table',1);
+INSERT INTO `migrations` VALUES (21,'2020_04_23_212320_update_restorants_table',1);
+INSERT INTO `migrations` VALUES (22,'2020_04_23_212502_update_orders_table',1);
+INSERT INTO `migrations` VALUES (23,'2020_04_28_112519_update_address_table',1);
+INSERT INTO `migrations` VALUES (24,'2020_05_07_122727_create_hours_table',1);
+INSERT INTO `migrations` VALUES (25,'2020_05_09_012646_update_orders_add_delivery_table',1);
+INSERT INTO `migrations` VALUES (26,'2020_05_09_024507_add_options_to_settings_table',1);
+INSERT INTO `migrations` VALUES (27,'2020_05_20_232204_create_notifications_table',1);
+INSERT INTO `migrations` VALUES (28,'2020_06_03_134258_change_radius_to_delivery_area_restorants_table',1);
+INSERT INTO `migrations` VALUES (29,'2020_06_26_131803_create_sms_verifications_table',1);
+INSERT INTO `migrations` VALUES (30,'2020_07_12_182829_create_extras_table',1);
+INSERT INTO `migrations` VALUES (31,'2020_07_14_155509_create_plan_table',1);
+INSERT INTO `migrations` VALUES (32,'2020_07_23_183000_update_restorants_with_featured',1);
+INSERT INTO `migrations` VALUES (33,'2020_07_28_131511_update_users_sms_verification',1);
+INSERT INTO `migrations` VALUES (34,'2020_07_30_102916_change_json_to_string',1);
+INSERT INTO `migrations` VALUES (35,'2020_08_01_014851_create_variants',1);
+INSERT INTO `migrations` VALUES (36,'2020_08_14_003718_create_ratings_table',1);
+INSERT INTO `migrations` VALUES (37,'2020_08_18_035731_update_table_plans',1);
+INSERT INTO `migrations` VALUES (38,'2020_08_18_053012_update_user_add_plan',1);
+INSERT INTO `migrations` VALUES (39,'2020_09_02_131604_update_orders_time_to_prepare',1);
+INSERT INTO `migrations` VALUES (40,'2020_09_09_080747_create_cities_table',1);
+INSERT INTO `migrations` VALUES (41,'2020_09_28_131250_update_item_softdelete',1);
+INSERT INTO `migrations` VALUES (42,'2020_10_24_150254_create_tables_table',1);
+INSERT INTO `migrations` VALUES (43,'2020_10_25_021321_create_visits_table',1);
+INSERT INTO `migrations` VALUES (44,'2020_10_26_004421_update_orders_client_nullable',1);
+INSERT INTO `migrations` VALUES (45,'2020_10_26_104351_update_restorant_table',1);
+INSERT INTO `migrations` VALUES (46,'2020_10_26_190049_update_plan',1);
+INSERT INTO `migrations` VALUES (47,'2020_10_27_180123_create_stripe_payment',1);
+INSERT INTO `migrations` VALUES (48,'2020_11_01_190615_update_user_table',1);
+INSERT INTO `migrations` VALUES (49,'2020_11_05_081140_create_paths_table',1);
+INSERT INTO `migrations` VALUES (50,'2020_11_14_111220_create_phone_in_orders',1);
+INSERT INTO `migrations` VALUES (51,'2020_11_17_211252_update_logo_in_settings',1);
+INSERT INTO `migrations` VALUES (52,'2020_11_25_182453_create_paypal_payment',1);
+INSERT INTO `migrations` VALUES (53,'2020_11_25_225536_update_user_for_paypal_subsc',1);
+INSERT INTO `migrations` VALUES (54,'2020_11_27_102829_update_restaurants_for_delivery_pickup',1);
+INSERT INTO `migrations` VALUES (55,'2020_11_27_165901_create_coupons_table',1);
+INSERT INTO `migrations` VALUES (56,'2020_12_02_192213_update_for_whatsapp_order',1);
+INSERT INTO `migrations` VALUES (57,'2020_12_02_195333_update_for_mollie_payment',1);
+INSERT INTO `migrations` VALUES (58,'2020_12_07_142304_create_banners_table',1);
+INSERT INTO `migrations` VALUES (59,'2020_12_10_155335_wp_address',1);
+INSERT INTO `migrations` VALUES (60,'2020_12_14_195627_update_for_paystack_sub',1);
+INSERT INTO `migrations` VALUES (61,'2020_12_15_130511_update_paystack_verification',1);
+INSERT INTO `migrations` VALUES (62,'2020_12_27_155822_create_restaurant_multilanguage',1);
+INSERT INTO `migrations` VALUES (63,'2020_12_27_162902_update_restaurant_with_currency',1);
+INSERT INTO `migrations` VALUES (64,'2021_01_16_093708_update_restorant_with_pay_link',1);
+INSERT INTO `migrations` VALUES (65,'2021_01_22_142723_create_crud_for_whatsapp_landing',1);
+INSERT INTO `migrations` VALUES (66,'2021_02_16_065037_create_configs_table',2);
+INSERT INTO `migrations` VALUES (67,'2021_02_18_140330_allow_null_on_config_value',2);
+INSERT INTO `migrations` VALUES (68,'2021_02_22_135519_update_settinga_table',2);
+INSERT INTO `migrations` VALUES (69,'2021_02_26_113854_order_fee_update',2);
+INSERT INTO `migrations` VALUES (70,'2021_03_23_135952_update_config_table',2);
+INSERT INTO `migrations` VALUES (71,'2021_04_17_002457_update_restables',2);
+INSERT INTO `migrations` VALUES (72,'2021_04_17_231310_update_restablesagain',2);
+INSERT INTO `migrations` VALUES (73,'2021_04_22_184249_update_user_with_staff',2);
+INSERT INTO `migrations` VALUES (74,'2021_04_26_190410_create_cart_storage_table',2);
+INSERT INTO `migrations` VALUES (75,'2021_05_19_032734_update_order_with_employee_id',2);
+INSERT INTO `migrations` VALUES (76,'2021_05_19_124342_create_simple_delivery_areas',2);
+INSERT INTO `migrations` VALUES (77,'2021_05_28_070715_create_expenses',2);
+INSERT INTO `migrations` VALUES (78,'2021_07_01_084847_make_restaurant_soft_delete',2);
+INSERT INTO `migrations` VALUES (79,'2021_07_16_170627_make_user_soft_delete',2);
+INSERT INTO `migrations` VALUES (80,'2021_07_16_172430_make_user_email_not_unique',2);
+INSERT INTO `migrations` VALUES (81,'2021_07_21_153807_rename_to_company',2);
+INSERT INTO `migrations` VALUES (82,'2021_08_04_073843_add_md_to_orders',2);
+INSERT INTO `migrations` VALUES (83,'2021_09_03_131601_update_with_default_variants',2);
+INSERT INTO `migrations` VALUES (84,'2021_09_04_091444_cat_sd',2);
+INSERT INTO `migrations` VALUES (85,'2021_10_09_162446_update_order_with_coupons',2);
+INSERT INTO `migrations` VALUES (86,'2021_11_06_104921_create_item_has_allergens',2);
+INSERT INTO `migrations` VALUES (87,'2022_01_26_085729_update_item_desc_to_text',2);
+INSERT INTO `migrations` VALUES (88,'2022_02_26_234212_update_users_with_expotoken',2);
+INSERT INTO `migrations` VALUES (89,'2022_04_06_224707_update_items_with_discount_price',2);
+INSERT INTO `migrations` VALUES (90,'2022_04_14_082828_update_companies_with_can_dinein',2);
+INSERT INTO `migrations` VALUES (91,'2022_04_14_091003_update_delivery_areas_with_phone',2);
+INSERT INTO `migrations` VALUES (92,'2022_05_19_071840_compatible_with_stripe',2);
+INSERT INTO `migrations` VALUES (93,'2022_07_23_081211_kds',2);
+INSERT INTO `migrations` VALUES (94,'2022_08_03_170522_user_has_categories',2);
+INSERT INTO `migrations` VALUES (95,'2022_12_23_100529_update_orders_with_id_per_vendor',2);
+INSERT INTO `migrations` VALUES (96,'2022_12_27_012420_update_posts_description_table',2);
+INSERT INTO `migrations` VALUES (97,'2023_01_23_175344_large_numbers',2);
+INSERT INTO `migrations` VALUES (98,'2025_07_21_162114_make_pure_saas',2);
+INSERT INTO `migrations` VALUES (99,'2023_05_22_203323_update_order__table_with_tips',3);
+INSERT INTO `migrations` VALUES (100,'2023_05_23_212332_update_items_with_stock',3);
+INSERT INTO `migrations` VALUES (101,'2023_05_26_162559_vendor_has_categories',3);
+INSERT INTO `migrations` VALUES (102,'2023_05_24_113124_update_plan_with_razorpay',4);
+INSERT INTO `migrations` VALUES (103,'2023_08_30_185056_add_column_to_companies_table',5);
+INSERT INTO `migrations` VALUES (104,'2023_08_30_190206_add_column_to_plan_table',5);
+INSERT INTO `migrations` VALUES (105,'2019_09_15_000010_create_tenants_table',6);
+INSERT INTO `migrations` VALUES (106,'2019_09_15_000020_create_domains_table',6);
+INSERT INTO `migrations` VALUES (107,'2023_10_23_142310_create_period_discounts_table',6);
+INSERT INTO `migrations` VALUES (108,'2023_10_28_205029_create_contact_messages_table',6);
+INSERT INTO `migrations` VALUES (109,'2023_11_02_140451_create_period_discount_for_restourant_table',6);
+INSERT INTO `migrations` VALUES (110,'2023_11_02_161007_create_compare_plan_name',6);
+INSERT INTO `migrations` VALUES (111,'2023_11_06_180603_change_unique_field_in_table',6);

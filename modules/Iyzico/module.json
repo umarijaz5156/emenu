@@ -1,0 +1,82 @@
+{
+    "alias": "iyzico",
+    "isPaymentModule":true,
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Iyzico\\Providers\\Main"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "global_fields":[
+        {
+            "separator":"Iyzico configuration",
+            "title": "Enable Iyzico for payments when ordering",
+            "key": "ENABLE_IYZICO",
+            "ftype": "bool",
+            "value":false
+        },
+        {
+            "title": "System will use",
+            "key": "VENDORS_OR_ADMIN_IYZICO",
+            "ftype":"select",
+            "onlyin":"qrsaas",
+            "value":"admin",
+            "data":{
+                "admin":"Admin defined Iyzico",
+                "vendor":"Vendor defined Iyzico"
+            }
+        },{
+            "title":"Iyzico api key", 
+            "key":"IYZICO_API_KEY", 
+            "value":""
+        },
+        {
+            "title":"Iyzico secret", 
+            "key":"IYZICO_SECRET", 
+            "value":""
+        },
+        {
+            "title":"Iyzico mode", 
+            "key":"IYZICO_MODE", 
+            "value":"sandbox",
+            "ftype":"select",
+            "data":{
+                "sandbox":"Development - sandbox",
+                "live":"Production"
+            }
+        }],
+        "vendor_fields":[{
+            "separator":"Iyzico configuration",
+            "title": "Enable Iyzico for payments when ordering",
+            "key": "iyzico_enable",
+            "ftype": "bool",
+            "value":false,
+            "onlyin":"qrsaas"
+        },{
+            "title":"Iyzico api key", 
+            "key":"iyzico_apy_key", 
+            "value":"",
+            "onlyin":"qrsaas"
+        },
+        {
+            "title":"Iyzico secret", 
+            "key":"iyzico_secret", 
+            "value":"",
+            "onlyin":"qrsaas"
+        },
+        {
+            "title":"Iyzico mode", 
+            "key":"iyzico_mode", 
+            "value":"sandbox",
+            "ftype":"select",
+            "onlyin":"qrsaas",
+            "data":{
+                "sandbox":"Development - sandbox",
+                "live":"Production"
+            }
+        }]
+}

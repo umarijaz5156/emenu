@@ -1,0 +1,51 @@
+.btn-small{
+    padding: .2rem .25rem !important;
+}
+
+.btn-neutral
+{
+    color: #212529;
+    border-color: #fff;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}
+.btn-neutral:hover
+{
+    color: #212529;
+    border-color: white;
+    background-color: white;
+}
+.btn-neutral:focus,
+.btn-neutral.focus
+{
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08), 0 0 0 0 rgba(255, 255, 255, .5);
+}
+.btn-neutral.disabled,
+.btn-neutral:disabled
+{
+    color: #212529;
+    border-color: #fff;
+    background-color: #fff;
+}
+.btn-neutral:not(:disabled):not(.disabled):active,
+.btn-neutral:not(:disabled):not(.disabled).active,
+.show > .btn-neutral.dropdown-toggle
+{
+    color: #212529;
+    border-color: white;
+    background-color: #e6e6e6;
+}
+
+
+#langswitch .show {
+    display: block;
+}
+
+#langswitch .dropdown-menu.show {
+    display: block !important;
+}
+
+
+#langswitch .dropdown > a::after {
+    border-top: 5px solid #6a6a6a;
+}

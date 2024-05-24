@@ -1,0 +1,41 @@
+{
+    "alias": "paypal-subscribe",
+    "description": "",
+    "keywords": [],
+    "version":"2.1",
+    "isPaymentModule":false,
+    "isSubscriptionModule":true,
+    "name":"PayPal",
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\PaypalSubscribe\\Providers\\Main"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "global_fields":[
+        {
+            "separator":"PayPal Subscribe configuration",
+            "title":"PayPal client id - Subscribe", 
+            "key":"PAYPAL_SUBSCRIBE_CLIENT_ID", 
+            "value":""
+        },
+        {
+            "title":"Paypal secret  - Subscribe", 
+            "key":"PAYPAL_SUBSCRIBE_SECRET", 
+            "value":""
+        },
+        {
+            "title":"Paypal mode  - Subscribe", 
+            "key":"PAYPAL_SUBSCRIBE_MODE", 
+            "value":"sandbox",
+            "ftype":"select",
+            "data":{
+                "sandbox":"Development - sandbox",
+                "live":"Production"
+            }
+        }
+    ],
+    "vendor_fields":[]
+}

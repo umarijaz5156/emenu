@@ -1,0 +1,40 @@
+{
+    "alias": "paystack-subscribe",
+    "version": "1.1",
+    "isPaymentModule":false,
+    "isSubscriptionModule":true,
+    "name":"Paystack",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\PaystackSubscribe\\Providers\\Main"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "global_fields":[
+        {
+            "separator":"Paystack Subscribe configuration",
+            "title":"Paystack public key - Subscribe", 
+            "key":"PayStack_SUBSCRIBE_PUBLIC_KEY", 
+            "value":""
+        },
+        {
+            "title":"Paystack private secret - Subscribe", 
+            "key":"PayStack_SUBSCRIBE_SECRET", 
+            "value":""
+        },
+        {
+            "title":"Paypal mode  - Subscribe", 
+            "key":"PayStack_SUBSCRIBE_MODE", 
+            "value":"sandbox",
+            "ftype":"select",
+            "data":{
+                "sandbox":"Development - sandbox",
+                "live":"Production"
+            }
+        }
+    ]
+}

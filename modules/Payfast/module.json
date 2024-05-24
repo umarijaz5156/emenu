@@ -1,0 +1,82 @@
+{
+    "alias": "payfast",
+    "version":"1.1",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "isPaymentModule":true,
+    "order": 0,
+    "providers": [
+        "Modules\\Payfast\\Providers\\Main"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "global_fields":[
+        {
+            "separator":"Payfast configuration",
+            "title": "Enable Payfast for payments when ordering",
+            "key": "ENABLE_PAYFAST",
+            "ftype": "bool",
+            "value": false
+        },{
+            "title": "System will use",
+            "key": "VENDORS_OR_ADMIN_PAYFAST",
+            "ftype": "select",
+            "value": "admin",
+            "data":{
+                "admin":"Admin defined Payfast",
+                "vendor":"Vendor defined Payfast"
+            }
+        },{
+            "title":"Payfast Merchant id", 
+            "key":"PAYFAST_MERCHANT_ID", 
+            "value":""
+        },{
+            "title":"Payfast Merchant key", 
+            "key":"PAYFAST_MERCHANT_KEY", 
+            "value":""
+        },
+        {
+            "title":"Payfast mode", 
+            "key":"PAYFAST_MODE", 
+            "value":"sandbox",
+            "ftype":"select",
+            "data":{
+                "sandbox":"Development - sandbox",
+                "live":"Production"
+            }
+        }
+    ],
+    "vendor_fields":[
+        {
+            "separator":"Payfast configuration",
+            "title": "Enable Payfast for payments when ordering",
+            "key": "payfast_enable",
+            "ftype": "bool",
+            "value": false,
+            "onlyin": "qrsaas"
+        },{
+            "title":"Payfast Merchant id", 
+            "key":"payfast_merchantId", 
+            "value":"",
+            "onlyin": "qrsaas"
+        },{
+            "title":"Payfast Merchant key", 
+            "key":"payfast_merchantKey", 
+            "value":"",
+            "onlyin": "qrsaas"
+        },
+        {
+            "title":"Payfast mode", 
+            "key":"payfast_mode", 
+            "value":"sandbox",
+            "ftype":"select",
+            "onlyin":"qrsaas",
+            "data":{
+                "sandbox":"Development - sandbox",
+                "live":"Production"
+            }
+        }
+    ]
+}
